@@ -22,12 +22,12 @@ export default {
     },
     {
       name: '员工管理',
-      url: '/components',
+      url: '/views/employee',
       icon: 'icon-puzzle',
       children: [
         {
           name: '员工列表',
-          url: '/components/buttons',
+          url: '/views/employee/list',
         },
         {
           name: '权限管理',

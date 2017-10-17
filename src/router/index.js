@@ -8,6 +8,7 @@ import Full from '@/containers/Full'
 import Dashboard from '@/views/Dashboard'
 import Login from '@/views/Login'
 import Tasks from '@/views/Tasks'
+import EmployeeList from '@/views/employee/EmployeeList'
 
 Vue.use(Router)
 
@@ -45,6 +46,21 @@ export default new Router({
               path: 'tasks',
               name: '任务列表',
               component: Tasks
+            }
+          ]
+        },
+        {
+          path: 'views/employee',
+          redirect: '/views/employee/list',
+          name: '员工管理',
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: 'list',
+              name: '员工列表',
+              component: EmployeeList
             }
           ]
         }
